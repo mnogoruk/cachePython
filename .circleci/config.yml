@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       # using custom image, see .circleci/images/primary/Dockerfile
-      - image: python:3.9
+      - image: circleci/python:3.9
     working_directory: /go/src/github.com/mnogoruk/cahcePython
     steps:
       - run:
@@ -24,11 +24,8 @@ jobs:
       - run:
           name: Dirs
           command: |
-            ls
+            ls -a
             pwd
-      - run:
-          name: Build service
-          command: make
 
       - run:
           name: Start container and verify it's working
