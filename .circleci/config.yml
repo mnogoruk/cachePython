@@ -26,6 +26,9 @@ jobs:
           command: |
             ls
             pwd
+      - run:
+          name: Build service
+          command: make
 
       - run:
           name: Start container and verify it's working
