@@ -4,6 +4,7 @@ jobs:
     docker:
       # using custom image, see .circleci/images/primary/Dockerfile
       - image: circleci/python:3.9
+      - image: circleci/go:latest
     steps:
       - run:
           name: Install Docker client
