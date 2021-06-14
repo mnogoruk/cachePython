@@ -1,0 +1,14 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+    - /./app
+    depends_on:
+      - memcached
+  memcached:
+    image: library/memcached:alpine
+    ports:
+    - "11211:11211"
