@@ -25,6 +25,7 @@ jobs:
           name: Dirs
           command: |
             ls
+            pwd
 
       - run:
           name: Start container and verify it's working
